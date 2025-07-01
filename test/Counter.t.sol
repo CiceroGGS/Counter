@@ -17,8 +17,7 @@ contract CounterTest is Test {
         assertEq(counter.getNumber(), 1);
     }
 
-    function test_SetNumber(uint8 x) public {
-        uint8 x = 9;
+    function testFuzz_SetNumber(uint8 x) public {
         counter.setNumber(x);
         assertEq(counter.getNumber(), x);
     }
